@@ -12,12 +12,10 @@ public class Player : MonoBehaviour
 
 	public float speed = 1.0f;
 	public float jumpSpeed = 10.0f;
-
 	public List<PickableItem> closeItems;
 	public List<PickableItem> bag;
 
 	public Transform itemDropPoint;
-
 	[HideInInspector]
 	public Rigidbody rb;
 
