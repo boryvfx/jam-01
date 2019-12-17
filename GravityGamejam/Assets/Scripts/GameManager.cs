@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Raycaster : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-	public bool showDebug = true;
+	public static Player MainPlayer;
+
+	[SerializeField]
+	protected Player mainPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+		MainPlayer = mainPlayer;
     }
 }
