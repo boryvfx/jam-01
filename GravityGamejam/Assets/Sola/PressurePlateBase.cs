@@ -2,36 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour
+public class PressurePlateBase : MonoBehaviour
 {
     public bool stay = false;
 
     protected int recWeight = 5;
-    public float current_height = 0f;
+    public float currentHeight = 0f;
     public float minHeight = -0.1f;
     public float moveSpeed = 0.005f;
-    public float tickSpeed = 1f/60f;
+    public float tickSpeed = 1f / 60f;
     public float nextUpdate;
-    private string last = " ";
-    private bool tick;
+    protected bool tick;
 
     private void Start()
     {
         nextUpdate = Time.time;
     }
 
-    private void FixedUpdate()
+    protected void FixedUpdate()
     {
-        tick = checkNextUpdate();
-        if (!stay && current_height < 0 && tick)
+        tick  = checkNextUpdate();
+        if (!stay && currentHeight < 0 && tick)
         {
-            current_height += moveSpeed;
+            currentHeight += moveSpeed;
             transform.parent.transform.position += Vector3.up * moveSpeed;
-            //transform.position -= Vector3.up * moveSpeed;
         }
     }
 
-    private bool checkNextUpdate()
+    protected bool checkNextUpdate()
     {
         if (Time.time >= nextUpdate)
         {
@@ -41,7 +39,7 @@ public class PressurePlate : MonoBehaviour
         return false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Player>().weight > recWeight)
         {
@@ -50,17 +48,16 @@ public class PressurePlate : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
+    protected void OnTriggerStay(Collider other)
     {
-        if (stay && tick && current_height > minHeight)
+        if (stay && tick && currentHeight > minHeight)
         {
-            current_height -= moveSpeed;
+            currentHeight -= moveSpeed;
             transform.parent.transform.position += Vector3.up * -moveSpeed;
-            //transform.position += Vector3.up * moveSpeed;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected void OnTriggerExit(Collider other)
     {
         stay = false;
     }
