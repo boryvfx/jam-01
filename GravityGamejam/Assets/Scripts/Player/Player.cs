@@ -6,26 +6,26 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	public int weight = 15;
+	[HideInInspector]
 	public WEIGHT_STATE weightState;
 
-	private Vector3 nextMovement;
 	public int mediumThreshold = 35;
 	public int heavyThreshold = 75;
 
 	public float speed = 1.0f;
 	public float jumpSpeed = 10.0f;
 	public List<PickableItem> closeItems;
-
-    internal void AddMovement(Vector3 vector3)
-    {
-        
-    }
-
     public List<PickableItem> bag;
 
 	public Transform itemDropPoint;
 	[HideInInspector]
 	public Rigidbody rb;
+	
+	private Vector3 nextMovement;
+	internal void AddMovement(Vector3 vector3)
+	{
+
+	}
 
 	private void Start()
 	{
