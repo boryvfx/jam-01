@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PressurePlateDoor : PressurePlateBase
 {
@@ -12,9 +10,9 @@ public class PressurePlateDoor : PressurePlateBase
     public float doorTriggerMoveSpeed = 0.15f;
     private float doorCurrentHeight = 0f;
 
-    private void FixedUpdate()
+    protected override void FixedUpdateInherited()
     {
-        base.FixedUpdate();
+        base.FixedUpdateInherited();
         if (tick)
         {
             if (currentHeight <= minHeight)
