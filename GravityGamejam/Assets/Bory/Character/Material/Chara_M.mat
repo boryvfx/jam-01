@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_New Shader Graph
+  m_Name: Chara_M
   m_Shader: {fileID: -6465566751694194690, guid: fe57bd795ce6dbd4190128d120bfeacb,
     type: 3}
   m_ShaderKeywords: 
@@ -21,6 +21,12 @@ Material:
   - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats: []
+    m_TexEnvs:
+    - Texture2D_D958E241:
+        m_Texture: {fileID: 2800000, guid: 7206c8362cfbbba4788250bd39a23686, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_21DD077F: 1
+    - Vector1_538F8E8C: 0.15
     m_Colors: []
