@@ -1,0 +1,458 @@
+atomVersion 1.0;
+mayaVersion 2018;
+mayaSceneFile D:/Unity Projects/jam-01/Ressources/Animation/scenes/jam_Idle.ma;
+timeUnit film;
+linearUnit cm;
+angularUnit deg;
+startTime 1;
+endTime 32;
+dagNode {
+  jam_RIG_ref:Main 2 4;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKNeck_M 8 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKHead_M 14 2;
+  static Global Global 0;
+  { 0 }
+  static rotate.rx rotateX 1;
+  { 0 }
+  static rotate.ry rotateY 2;
+  { 0 }
+  static rotate.rz rotateZ 3;
+  { 0 }
+  static scale.sx scaleX 4;
+  { 1 }
+  static scale.sy scaleY 5;
+  { 1 }
+  static scale.sz scaleZ 6;
+  { 1 }
+  static translate.tx translateX 7;
+  { 0 }
+  static translate.ty translateY 8;
+  { 0 }
+  static translate.tz translateZ 9;
+  { 0 }
+  static v visibility 10;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKScapula_R 8 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKShoulder_R 12 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKElbow_R 16 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKScapula_L 8 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKShoulder_L 12 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKElbow_L 16 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKRoot_M 7 5;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKSpine1_M 12 2;
+  cached rotate.rx rotateX 0;
+  { 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  }
+  cached rotate.ry rotateY 1;
+  { -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0  }
+  cached rotate.rz rotateZ 2;
+  { 0 -0.109375 -0.35 -0.590625 -0.7 -0.66992188 -0.590625 -0.47851563 -0.35 -0.22148438 -0.109375 -0.030078125 0 -0.03877551 -0.13877551 -0.2755102 -0.4244898 -0.56122449 -0.66122449 -0.7 -0.68622685 -0.64814815 -0.590625 -0.51851852 -0.43668981 -0.35 -0.26331019 -0.18148148 -0.109375 -0.051851852 -0.013773148 0  }
+  cached scale.sx scaleX 3;
+  { 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  }
+  cached scale.sy scaleY 4;
+  { 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  }
+  cached scale.sz scaleZ 5;
+  { 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  }
+  cached translate.tx translateX 6;
+  { 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  }
+  cached translate.ty translateY 7;
+  { 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  }
+  cached translate.tz translateZ 8;
+  { 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  }
+  cached v visibility 9;
+  { 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  }
+}
+dagNode {
+  jam_RIG_ref:FKChest_M 16 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:HipSwinger_M 9 1;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static v visibility 3;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:IKLeg_R 8 4;
+  static antiPop antiPop 0;
+  { 0 }
+  static Lenght1 Lenght1 1;
+  { 1 }
+  static Lenght2 Lenght2 2;
+  { 1 }
+  static rotate.rx rotateX 3;
+  { 0 }
+  static rotate.ry rotateY 4;
+  { 0 }
+  static rotate.rz rotateZ 5;
+  { 0 }
+  static scale.sx scaleX 6;
+  { 1 }
+  static scale.sy scaleY 7;
+  { 1 }
+  static scale.sz scaleZ 8;
+  { 1 }
+  static stretchy stretchy 9;
+  { 0 }
+  static translate.tx translateX 10;
+  { 0 }
+  static translate.ty translateY 11;
+  { 0 }
+  static translate.tz translateZ 12;
+  { 0 }
+  static v visibility 13;
+  { 1 }
+  static volume volume 14;
+  { 10 }
+}
+dagNode {
+  jam_RIG_ref:PoleLeg_R 8 1;
+  static follow follow 0;
+  { 10 }
+  static lock lock 1;
+  { 0 }
+  static translate.tx translateX 2;
+  { 0 }
+  static translate.ty translateY 3;
+  { 0 }
+  static translate.tz translateZ 4;
+  { 0 }
+}
+dagNode {
+  jam_RIG_ref:IKLeg_L 8 4;
+  static antiPop antiPop 0;
+  { 0 }
+  static Lenght1 Lenght1 1;
+  { 1 }
+  static Lenght2 Lenght2 2;
+  { 1 }
+  static rotate.rx rotateX 3;
+  { 0 }
+  static rotate.ry rotateY 4;
+  { 0 }
+  static rotate.rz rotateZ 5;
+  { 0 }
+  static scale.sx scaleX 6;
+  { 1 }
+  static scale.sy scaleY 7;
+  { 1 }
+  static scale.sz scaleZ 8;
+  { 1 }
+  static stretchy stretchy 9;
+  { 0 }
+  static translate.tx translateX 10;
+  { 0 }
+  static translate.ty translateY 11;
+  { 0 }
+  static translate.tz translateZ 12;
+  { 0 }
+  static v visibility 13;
+  { 1 }
+  static volume volume 14;
+  { 10 }
+}
+dagNode {
+  jam_RIG_ref:PoleLeg_L 8 1;
+  static follow follow 0;
+  { 10 }
+  static lock lock 1;
+  { 0 }
+  static translate.tx translateX 2;
+  { 0 }
+  static translate.ty translateY 3;
+  { 0 }
+  static translate.tz translateZ 4;
+  { 0 }
+}
+dagNode {
+  jam_RIG_ref:FKIKLeg_R 6 1;
+  static FKIKBlend FKIKBlend 0;
+  { 10 }
+  static FKVis FKVis 1;
+  { 1 }
+  static IKVis IKVis 2;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKIKSpine_M 6 1;
+  static FKIKBlend FKIKBlend 0;
+  { 0 }
+  static FKVis FKVis 1;
+  { 1 }
+  static IKVis IKVis 2;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKIKLeg_L 6 1;
+  static FKIKBlend FKIKBlend 0;
+  { 10 }
+  static FKVis FKVis 1;
+  { 1 }
+  static IKVis IKVis 2;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:RootX_M 7 6;
+  cached legLock legLock 0;
+  { 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  }
+  cached rotate.rx rotateX 1;
+  { -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0  }
+  cached rotate.ry rotateY 2;
+  { -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0 -0  }
+  cached rotate.rz rotateZ 3;
+  { 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  }
+  cached translate.tx translateX 4;
+  { 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  }
+  cached translate.ty translateY 5;
+  { 0 -0.027696793 -0.099125364 -0.196793 -0.303207 -0.40087464 -0.47230321 -0.5 -0.47851563 -0.421875 -0.34179688 -0.25 -0.15820313 -0.078125 -0.021484375 0 -0.027696793 -0.099125364 -0.196793 -0.303207 -0.40087464 -0.47230321 -0.5 -0.48285322 -0.43689986 -0.37037037 -0.2914952 -0.2085048 -0.12962963 -0.063100137 -0.017146776 0  }
+  cached translate.tz translateZ 6;
+  { 0 0.027696793 0.099125364 0.196793 0.303207 0.40087464 0.47230321 0.5 0.47851563 0.421875 0.34179688 0.25 0.15820313 0.078125 0.021484375 0 0.027696793 0.099125364 0.196793 0.303207 0.40087464 0.47230321 0.5 0.48285322 0.43689986 0.37037037 0.2914952 0.2085048 0.12962963 0.063100137 0.017146776 0  }
+  cached v visibility 7;
+  { 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  }
+}
+dagNode {
+  jam_RIG_ref:bag_ctrl 2 1;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { -7.1054274e-15 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { -7.1054274e-15 }
+  static v visibility 9;
+  { 1 }
+}
