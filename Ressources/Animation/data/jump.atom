@@ -1,0 +1,1289 @@
+atomVersion 1.0;
+mayaVersion 2018;
+mayaSceneFile D:/Unity Projects/jam-01/Ressources/Animation/scenes/jam_Jump.ma;
+timeUnit film;
+linearUnit cm;
+angularUnit deg;
+startTime 1;
+endTime 7;
+dagNode {
+  jam_RIG_ref:Main 2 4;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKNeck_M 8 2;
+  anim scale.scaleX scaleX 0;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleY scaleY 1;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleZ scaleZ 2;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateX translateX 3;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 12.864757 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateY translateY 4;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 7.7756429 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateZ translateZ 5;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim visibility visibility 6;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 spline step 1 0 0;
+      5 1 spline step 1 0 0;
+      7 1 spline step 1 0 0;
+    }
+  }
+  anim rotate.rotateX rotateX 7;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateY rotateY 8;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 9;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+}
+dagNode {
+  jam_RIG_ref:FKHead_M 14 2;
+  anim scale.scaleX scaleX 0;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleY scaleY 1;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleZ scaleZ 2;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim Global Global 3;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateX translateX 4;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 0 plateau plateau 1 0 0;
+      5 10.081859 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateY translateY 5;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 0 plateau plateau 1 0 0;
+      5 -3.2547591 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateZ translateZ 6;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim visibility visibility 7;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 spline step 1 0 0;
+      3 1 spline step 1 0 0;
+      5 1 spline step 1 0 0;
+      7 1 spline step 1 0 0;
+    }
+  }
+  anim rotate.rotateX rotateX 8;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateY rotateY 9;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 10;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+}
+dagNode {
+  jam_RIG_ref:FKScapula_R 8 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKShoulder_R 12 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKElbow_R 16 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKScapula_L 8 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKShoulder_L 12 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKElbow_L 16 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKRoot_M 7 5;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKSpine1_M 12 2;
+  anim scale.scaleX scaleX 0;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleY scaleY 1;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleZ scaleZ 2;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateX translateX 3;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 12.413808 plateau plateau 1 0 0;
+      7 11.116909 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateY translateY 4;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 8.4770259 plateau plateau 1 0 0;
+      7 6.0354659 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateZ translateZ 5;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim visibility visibility 6;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 spline step 1 0 0;
+      5 1 spline step 1 0 0;
+      7 1 spline step 1 0 0;
+    }
+  }
+  anim rotate.rotateX rotateX 7;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateY rotateY 8;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 9;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+}
+dagNode {
+  jam_RIG_ref:FKChest_M 16 2;
+  anim scale.scaleX scaleX 0;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleY scaleY 1;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleZ scaleZ 2;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 plateau plateau 1 0 0;
+      5 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateX translateX 3;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 1.3301433 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateY translateY 4;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 2.4236093 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateZ translateZ 5;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim visibility visibility 6;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 1 spline step 1 0 0;
+      5 1 spline step 1 0 0;
+      7 1 spline step 1 0 0;
+    }
+  }
+  anim rotate.rotateX rotateX 7;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateY rotateY 8;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 9;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      3 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+}
+dagNode {
+  jam_RIG_ref:HipSwinger_M 9 1;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static v visibility 3;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:IKLeg_R 8 4;
+  anim scale.scaleX scaleX 0;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleY scaleY 1;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleZ scaleZ 2;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateX translateX 3;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateY translateY 4;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateZ translateZ 5;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 -14.393513 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim stretchy stretchy 6;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim antiPop antiPop 7;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim Lenght1 Lenght1 8;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim Lenght2 Lenght2 9;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim volume volume 10;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 10 plateau plateau 1 0 0;
+      7 10 plateau plateau 1 0 0;
+    }
+  }
+  anim visibility visibility 11;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 spline step 1 0 0;
+      7 1 spline step 1 0 0;
+    }
+  }
+  anim rotate.rotateX rotateX 12;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateY rotateY 13;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 14;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+}
+dagNode {
+  jam_RIG_ref:PoleLeg_R 8 1;
+  static follow follow 0;
+  { 10 }
+  static lock lock 1;
+  { 0 }
+  static translate.tx translateX 2;
+  { 0 }
+  static translate.ty translateY 3;
+  { 0 }
+  static translate.tz translateZ 4;
+  { 0 }
+}
+dagNode {
+  jam_RIG_ref:IKLeg_L 8 4;
+  anim scale.scaleX scaleX 0;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleY scaleY 1;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim scale.scaleZ scaleZ 2;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateX translateX 3;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateY translateY 4;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateZ translateZ 5;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 -14.393513 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim stretchy stretchy 6;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim antiPop antiPop 7;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim Lenght1 Lenght1 8;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim Lenght2 Lenght2 9;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 plateau plateau 1 0 0;
+      7 1 plateau plateau 1 0 0;
+    }
+  }
+  anim volume volume 10;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 10 plateau plateau 1 0 0;
+      7 10 plateau plateau 1 0 0;
+    }
+  }
+  anim visibility visibility 11;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 spline step 1 0 0;
+      7 1 spline step 1 0 0;
+    }
+  }
+  anim rotate.rotateX rotateX 12;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateY rotateY 13;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 14;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+}
+dagNode {
+  jam_RIG_ref:PoleLeg_L 8 1;
+  static follow follow 0;
+  { 10 }
+  static lock lock 1;
+  { 0 }
+  static translate.tx translateX 2;
+  { 0 }
+  static translate.ty translateY 3;
+  { 0 }
+  static translate.tz translateZ 4;
+  { 0 }
+}
+dagNode {
+  jam_RIG_ref:FKIKLeg_R 6 1;
+  static FKIKBlend FKIKBlend 0;
+  { 10 }
+  static FKVis FKVis 1;
+  { 1 }
+  static IKVis IKVis 2;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKIKSpine_M 6 1;
+  static FKIKBlend FKIKBlend 0;
+  { 0 }
+  static FKVis FKVis 1;
+  { 1 }
+  static IKVis IKVis 2;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:FKIKLeg_L 6 1;
+  static FKIKBlend FKIKBlend 0;
+  { 10 }
+  static FKVis FKVis 1;
+  { 1 }
+  static IKVis IKVis 2;
+  { 1 }
+}
+dagNode {
+  jam_RIG_ref:RootX_M 7 6;
+  anim rotate.rotateX rotateX 0;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim legLock legLock 3;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateX translateX 4;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateY translateY 5;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 -28.432947 plateau plateau 1 0 0;
+      5 0 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim translate.translateZ translateZ 6;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 0 plateau plateau 1 0 0;
+      3 13.340464 plateau plateau 1 0 0;
+      5 22.622268 plateau plateau 1 0 0;
+      7 0 plateau plateau 1 0 0;
+    }
+  }
+  anim visibility visibility 7;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1 1 spline step 1 0 0;
+      5 1 spline step 1 0 0;
+      7 1 spline step 1 0 0;
+    }
+  }
+}
