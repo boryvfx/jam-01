@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,13 +8,20 @@ public class Player : MonoBehaviour
 	public int weight = 15;
 	public WEIGHT_STATE weightState;
 
+	private Vector3 nextMovement;
 	public int mediumThreshold = 35;
 	public int heavyThreshold = 75;
 
 	public float speed = 1.0f;
 	public float jumpSpeed = 10.0f;
 	public List<PickableItem> closeItems;
-	public List<PickableItem> bag;
+
+    internal void AddMovement(Vector3 vector3)
+    {
+        
+    }
+
+    public List<PickableItem> bag;
 
 	public Transform itemDropPoint;
 	[HideInInspector]
@@ -66,7 +74,7 @@ public class Player : MonoBehaviour
 				weight -= pickable.weight;
 				pickable.transform.position = itemDropPoint.position;
 				pickable.gameObject.SetActive(true);
-				pickable.rb.AddForce((Vector3.up*3 + Vector3.right * (Random.value - 0.5f) * 2) * Random.value * 5.0f, ForceMode.Impulse);
+				pickable.rb.AddForce((Vector3.up*3 + Vector3.right * (UnityEngine.Random.value - 0.5f) * 2) * UnityEngine.Random.value * 5.0f, ForceMode.Impulse);
 				bag.Remove(pickable);
 			}
 		}

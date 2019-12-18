@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BreakableGround : MonoBehaviour
+public class BreakableGround : Eventick
 {
     public bool stay = false;
 
@@ -10,38 +8,23 @@ public class BreakableGround : MonoBehaviour
     protected int baseResistance = 50;
     public int currentLife = 0;
     public int currentWeight = 0;
-    
-    public float tickSpeed = 1f / 2f;
-    public float nextUpdate;
-    
+
     private void Start()
     {
+        tickSpeed = 1f / 2f;
         currentLife = baseResistance;
         nextUpdate = Time.time;
     }
 
-    private bool checkNextUpdate()
+    protected override void FixedUpdateInherited()
     {
-        if (Time.time >= nextUpdate)
-        {
-            Debug.Log("Tick");
-            nextUpdate = Time.time + tickSpeed;
-            return true;
-        }
-        return false;
-    }
-
-    private void FixedUpdate()
-    {
-        if (stay && checkNextUpdate())
+        if (tick && stay)
         {
             Debug.Log("Losing life");
             currentLife -= currentWeight;
             if (currentLife <= 0)
                 Destroy(transform.parent.gameObject);
         }
-
-
     }
 
     private void OnTriggerEnter(Collider other)
