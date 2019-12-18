@@ -5,6 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	public int weight = 15;
+	public WEIGHT_STATE weightState;
+
+	public int mediumThreshold = 35;
+	public int heavyThreshold = 75;
 
 	public float speed = 1.0f;
 	public float jumpSpeed = 10.0f;
@@ -12,7 +16,8 @@ public class Player : MonoBehaviour
 	public List<PickableItem> bag;
 
 	public Transform itemDropPoint;
-	protected Rigidbody rb;
+	[HideInInspector]
+	public Rigidbody rb;
 
 	private void Start()
 	{
@@ -67,6 +72,13 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	protected void CheckWeightState()
+	{
+		if (weight > heavyThreshold) weightState = WEIGHT_STATE.HEAVY;
+		else if (weight > mediumThreshold) weightState = WEIGHT_STATE.MEDIUM;
+		else weightState = WEIGHT_STATE.LIGHT;
+	}
+
 	protected PickableItem GetClosestItem()
 	{
 		float minDistance = 5.0f;
@@ -93,10 +105,10 @@ public class Player : MonoBehaviour
 	{
 		if(other.tag == "Pickable")
 		{
-			if (other.GetComponent<PickableItem>() != null && other.gameObject.activeSelf)
+			PickableItem pickable = other.GetComponent<PickableItem>();
+			if (pickable != null && other.gameObject.activeSelf)
 			{
-				closeItems.Add(other.GetComponent<PickableItem>());
-				Debug.Log("Item Added || array count = " + closeItems.Count);
+				closeItems.Add(pickable);
 			}
 		}
 	}
@@ -105,11 +117,18 @@ public class Player : MonoBehaviour
 	{
 		if (other.tag == "Pickable")
 		{
-			if (other.GetComponent<PickableItem>() != null && other.gameObject.activeSelf)
+			PickableItem pickable = other.GetComponent<PickableItem>();
+			if (pickable != null && other.gameObject.activeSelf)
 			{
-				closeItems.Remove(other.GetComponent<PickableItem>());
-				Debug.Log("Item Removed || array count = " + closeItems.Count);
+				closeItems.Remove(pickable);
 			}
 		}
 	}
+}
+
+public enum WEIGHT_STATE
+{
+	LIGHT,
+	MEDIUM,
+	HEAVY
 }
