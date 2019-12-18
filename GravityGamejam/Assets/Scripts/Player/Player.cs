@@ -5,23 +5,49 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-	public int weight = 15;
-	[HideInInspector]
-	public WEIGHT_STATE weightState;
 
+	[HideInInspector]
+	public WEIGHT_STATE weightState = WEIGHT_STATE.LIGHT;
+	
+	protected float speed = 0;
+	protected float jumpSpeed = 0;
+
+	[HideInInspector]
+	public List<PickableItem> closeItems;
+
+	[HideInInspector]
+	public List<PickableItem> bag;
+
+	protected BoxCollider collider;
+	
+	public int weight = 15;
+	[Header("Size parameters")]
 	public int mediumThreshold = 35;
 	public int heavyThreshold = 75;
+	[Space(10)]
+	public float lightSpeed = 1.0f;
+	public float lightJumpSpeed = 1.0f;
+	public Vector3 lightSize = new Vector3(1, 2, 1);
+	public Vector3 lightCenter = new Vector3(0, 0, 0);
+	[Space(10)]
+	public float mediumSpeed = 1.0f;
+	public float mediumJumpSpeed = 1.0f;
+	public Vector3 mediumSize = new Vector3(1,2.5f,1);
+	public Vector3 mediumCenter = new Vector3(0,0.25f,0);
+	[Space(10)]
+	public float heavySpeed = 1.0f;
+	public float heavyJumpSpeed = 1.0f;
+	public Vector3 heavySize = new Vector3(1,3,1);
+	public Vector3 heavyCenter = new Vector3(0,0.5f,0);
 
-	public float speed = 1.0f;
-	public float jumpSpeed = 10.0f;
-	public List<PickableItem> closeItems;
-    public List<PickableItem> bag;
-
+	[Header("Bag Parameters")]
 	public Transform itemDropPoint;
+
 	[HideInInspector]
 	public Rigidbody rb;
 	
 	private Vector3 nextMovement;
+
 	internal void AddMovement(Vector3 vector3)
 	{
 
@@ -32,6 +58,35 @@ public class Player : MonoBehaviour
 		closeItems = new List<PickableItem>();
 		bag = new List<PickableItem>();
 		rb = GetComponent<Rigidbody>();
+		collider = GetComponent<BoxCollider>();
+		CheckWeightState();
+	}
+
+	protected void SetSize(WEIGHT_STATE weightState)
+	{
+		switch (weightState)
+		{
+			case WEIGHT_STATE.LIGHT:
+				collider.center = lightCenter;
+				collider.size = lightSize;
+				speed = lightSpeed;
+				jumpSpeed = lightJumpSpeed;
+				break;
+			case WEIGHT_STATE.MEDIUM:
+				collider.center = mediumCenter;
+				collider.size = mediumSize;
+				speed = mediumSpeed;
+				jumpSpeed = mediumJumpSpeed;
+				break;
+			case WEIGHT_STATE.HEAVY:
+				collider.center = heavyCenter;
+				collider.size = heavySize;
+				speed = heavySpeed;
+				jumpSpeed = heavyJumpSpeed;
+				break;
+			default:
+				break;
+		}
 	}
 
 	// Update is called once per frame
@@ -63,6 +118,7 @@ public class Player : MonoBehaviour
 				closeItems.Remove(pickable);
 				bag.Add(pickable);
 				pickable.gameObject.SetActive(false);
+				CheckWeightState();
 			}
 		}
 
@@ -76,6 +132,7 @@ public class Player : MonoBehaviour
 				pickable.gameObject.SetActive(true);
 				pickable.rb.AddForce((Vector3.up*3 + Vector3.right * (UnityEngine.Random.value - 0.5f) * 2) * UnityEngine.Random.value * 5.0f, ForceMode.Impulse);
 				bag.Remove(pickable);
+				CheckWeightState();
 			}
 		}
 	}
@@ -85,6 +142,8 @@ public class Player : MonoBehaviour
 		if (weight > heavyThreshold) weightState = WEIGHT_STATE.HEAVY;
 		else if (weight > mediumThreshold) weightState = WEIGHT_STATE.MEDIUM;
 		else weightState = WEIGHT_STATE.LIGHT;
+
+		SetSize(weightState);
 	}
 
 	protected PickableItem GetClosestItem()

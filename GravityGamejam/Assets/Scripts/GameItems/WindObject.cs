@@ -13,7 +13,7 @@ public class WindObject : MonoBehaviour
 		{
 			Debug.Log("up");
 			if(!(GameManager.MainPlayer.weight > maximumWeight))
-				GameManager.MainPlayer.rb.AddForce(Vector3.up * upwardForce);
+				GameManager.MainPlayer.rb.AddForce(transform.up * upwardForce);
 		}
 	}
 }
