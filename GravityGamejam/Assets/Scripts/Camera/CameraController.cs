@@ -15,12 +15,18 @@ public class CameraController : MonoBehaviour
 	public float verticalOffset = 1.0f;
 	public float horizontalOffset = 2.0f;
 
+	[Range(-90.0f,90.0f)]
 	public float verticalAngle = 0.0f;
+	[Range(-90.0f,90.0f)]
 	public float horizontalAngle = 0.0f;
 
     // Update is called once per frame
     void Update()
     {
-		transform.position = targetFocus.position + Vector3.forward * -distance;
+		Vector3 vOffset = Vector3.up * verticalOffset;
+		Vector3 hOffset = Vector3.right * horizontalOffset;
+		Vector3 dist = Vector3.forward * -distance;
+
+		transform.position = targetFocus.position + dist + vOffset + hOffset;
     }
 }
