@@ -793,6 +793,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e3c245c3574d94e8dd3ce5e90381a5, type: 3}
+--- !u!1 &596095418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596095419}
+  - component: {fileID: 596095420}
+  m_Layer: 0
+  m_Name: ItemDetectionSphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596095419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596095418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1297486067}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &596095420
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596095418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &678395034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1132,12 +1176,11 @@ GameObject:
   - component: {fileID: 1297486066}
   - component: {fileID: 1297486065}
   - component: {fileID: 1297486064}
-  - component: {fileID: 1297486068}
   - component: {fileID: 1297486063}
   - component: {fileID: 1297486062}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1253,22 +1296,10 @@ Transform:
   - {fileID: 1347354360}
   - {fileID: 896519325}
   - {fileID: 1689004827}
+  - {fileID: 596095419}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1297486068
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297486061}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1310837200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,7 +2616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71f2b8efa7976f4db951290b1c310bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upwardForce: 15
+  maximumWeight: 35
+  upwardForce: 100
 --- !u!65 &1994200704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2698,7 +2730,7 @@ PrefabInstance:
     - target: {fileID: 8645654782211572610, guid: 13e38aa3058f3d94c892c04414959a34,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13e38aa3058f3d94c892c04414959a34, type: 3}
