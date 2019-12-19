@@ -153,14 +153,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a05912295048d49a1329e53da6d979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
   weightState: 0
-  mediumThreshold: 20
-  heavyThreshold: 30
-  speed: 20
-  jumpSpeed: 27
   closeItems: []
   bag: []
+  weight: 10
+  mediumThreshold: 20
+  heavyThreshold: 30
+  lightSpeed: 15
+  lightJumpSpeed: 15
+  lightSize: {x: 1, y: 1, z: 1}
+  lightCenter: {x: 0, y: 0, z: 0}
+  mediumSpeed: 1
+  mediumJumpSpeed: 1
+  mediumSize: {x: 1, y: 1.5, z: 1}
+  mediumCenter: {x: 0, y: 0.25, z: 0}
+  heavySpeed: 1
+  heavyJumpSpeed: 1
+  heavySize: {x: 1, y: 2, z: 1}
+  heavyCenter: {x: 0, y: 0.5, z: 0}
   itemDropPoint: {fileID: 1569475539}
   rb: {fileID: 0}
 --- !u!65 &164370519
@@ -989,7 +999,7 @@ GameObject:
   - component: {fileID: 300809409}
   - component: {fileID: 300809407}
   m_Layer: 0
-  m_Name: Player (1)
+  m_Name: PlayerSize
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

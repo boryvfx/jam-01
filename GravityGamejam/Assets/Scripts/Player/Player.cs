@@ -27,17 +27,17 @@ public class Player : MonoBehaviour
 	[Space(10)]
 	public float lightSpeed = 1.0f;
 	public float lightJumpSpeed = 1.0f;
-	public Vector3 lightSize = new Vector3(1, 2, 1);
+	public Vector3 lightSize = new Vector3(1, 1, 1);
 	public Vector3 lightCenter = new Vector3(0, 0, 0);
 	[Space(10)]
 	public float mediumSpeed = 1.0f;
 	public float mediumJumpSpeed = 1.0f;
-	public Vector3 mediumSize = new Vector3(1,2.5f,1);
+	public Vector3 mediumSize = new Vector3(1,1.5f,1);
 	public Vector3 mediumCenter = new Vector3(0,0.25f,0);
 	[Space(10)]
 	public float heavySpeed = 1.0f;
 	public float heavyJumpSpeed = 1.0f;
-	public Vector3 heavySize = new Vector3(1,3,1);
+	public Vector3 heavySize = new Vector3(1,2,1);
 	public Vector3 heavyCenter = new Vector3(0,0.5f,0);
 
 	[Header("Bag Parameters")]
