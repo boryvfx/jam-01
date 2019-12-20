@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
 	[HideInInspector]
 	public WEIGHT_STATE weightState = WEIGHT_STATE.LIGHT;
 	
 	protected float speed = 0;
 	protected float jumpSpeed = 0;
+
+	protected bool isJumping = false;
+
+	public Animator animator;
 
 	[HideInInspector]
 	public List<PickableItem> closeItems;
@@ -45,16 +47,10 @@ public class Player : MonoBehaviour
 
 	[HideInInspector]
 	public Rigidbody rb;
-	
-	private Vector3 nextMovement;
-
-	internal void AddMovement(Vector3 vector3)
-	{
-
-	}
 
 	private void Start()
 	{
+		if (animator == null) Debug.LogAssertion("ANIMATOR IN PLAYER IS NULL");
 		closeItems = new List<PickableItem>();
 		bag = new List<PickableItem>();
 		rb = GetComponent<Rigidbody>();
@@ -96,16 +92,24 @@ public class Player : MonoBehaviour
 		if (Input.GetKey(KeyCode.A) || Input.GetKeyDown(KeyCode.Q))
 		{
 			rb.MovePosition(transform.position + Vector3.right * -speed * Time.deltaTime);
+			animator.Play("Run");
 		}
 		else if (Input.GetKey(KeyCode.D))
 		{
 			rb.MovePosition(transform.position + Vector3.right * speed * Time.deltaTime);
+			animator.Play("Run");
+		}
+		else
+		{
+			if (!isJumping) animator.Play("Idle");
 		}
 		
 		//Jump
-		if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+		if (!isJumping && (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
 		{
 			rb.velocity = Vector3.up * jumpSpeed;
+			animator.Play("Jump");
+			isJumping = true;
 		}
 
 		//Pick Close Item
@@ -130,11 +134,21 @@ public class Player : MonoBehaviour
 				weight -= pickable.weight;
 				pickable.transform.position = itemDropPoint.position;
 				pickable.gameObject.SetActive(true);
-				pickable.rb.AddForce((Vector3.up*3 + Vector3.right * (UnityEngine.Random.value - 0.5f) * 2) * UnityEngine.Random.value * 5.0f, ForceMode.Impulse);
+				pickable.SetVelocity(Vector3.up * Random.Range(1.0f, 2.0f) + Vector3.right * Random.value * 2.0f);
 				bag.Remove(pickable);
 				CheckWeightState();
 			}
 		}
+
+		if (Physics.Raycast(transform.position, Vector3.down, 1))
+		{
+			isJumping = false;
+		}
+	}
+
+	private void OnDrawGizmos()
+	{
+		Gizmos.DrawRay(transform.position, Vector3.down * 1);
 	}
 
 	protected void CheckWeightState()
