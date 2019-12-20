@@ -14,6 +14,11 @@ public class Player : MonoBehaviour
 
 	public Animator animator;
 
+	public GameObject playerRenderer;
+
+	protected float rightAngle = 105.0f;
+	protected float leftAngle = 255.0f;
+
 	[HideInInspector]
 	public List<PickableItem> closeItems;
 
@@ -21,7 +26,7 @@ public class Player : MonoBehaviour
 	public List<PickableItem> bag;
 
 	protected BoxCollider ownCollider;
-	
+
 	public int weight = 15;
 	[Header("Size parameters")]
 	public int mediumThreshold = 35;
@@ -92,25 +97,25 @@ public class Player : MonoBehaviour
 		if (Input.GetKey(KeyCode.A) || Input.GetKeyDown(KeyCode.Q))
 		{
 			rb.MovePosition(transform.position + Vector3.right * -speed * Time.deltaTime);
-			animator.Play("Run");
+			playerRenderer.transform.rotation = Quaternion.Euler(new Vector3(0, leftAngle, 0));
+			if(!isJumping) animator.Play("Run");
 		}
 		else if (Input.GetKey(KeyCode.D))
 		{
 			rb.MovePosition(transform.position + Vector3.right * speed * Time.deltaTime);
-		}
-		
-		//Jump
-		if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
-		{
-			rb.velocity = Vector3.up * jumpSpeed;
-			animator.Play("Run");
+			playerRenderer.transform.rotation = Quaternion.Euler(new Vector3(0, rightAngle, 0));
+			if (!isJumping) animator.Play("Run");
 		}
 		else
 		{
 			if (!isJumping) animator.Play("Idle");
 		}
-		
+
 		//Jump
+		if (Physics.Raycast(transform.position, Vector3.down, 1f))
+		{
+			isJumping = false;
+		}
 		if (!isJumping && (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
 		{
 			rb.velocity = Vector3.up * jumpSpeed;
@@ -144,11 +149,6 @@ public class Player : MonoBehaviour
 				bag.Remove(pickable);
 				CheckWeightState();
 			}
-		}
-
-		if (Physics.Raycast(transform.position, Vector3.down, 1))
-		{
-			isJumping = false;
 		}
 	}
 
