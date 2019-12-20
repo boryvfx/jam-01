@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 	[HideInInspector]
 	public List<PickableItem> bag;
 
-	protected BoxCollider collider;
+	protected BoxCollider ownCollider;
 	
 	public int weight = 15;
 	[Header("Size parameters")]
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 		closeItems = new List<PickableItem>();
 		bag = new List<PickableItem>();
 		rb = GetComponent<Rigidbody>();
-		collider = GetComponent<BoxCollider>();
+		ownCollider = GetComponent<BoxCollider>();
 		CheckWeightState();
 	}
 
@@ -67,20 +67,20 @@ public class Player : MonoBehaviour
 		switch (weightState)
 		{
 			case WEIGHT_STATE.LIGHT:
-				collider.center = lightCenter;
-				collider.size = lightSize;
+				ownCollider.center = lightCenter;
+				ownCollider.size = lightSize;
 				speed = lightSpeed;
 				jumpSpeed = lightJumpSpeed;
 				break;
 			case WEIGHT_STATE.MEDIUM:
-				collider.center = mediumCenter;
-				collider.size = mediumSize;
+				ownCollider.center = mediumCenter;
+				ownCollider.size = mediumSize;
 				speed = mediumSpeed;
 				jumpSpeed = mediumJumpSpeed;
 				break;
 			case WEIGHT_STATE.HEAVY:
-				collider.center = heavyCenter;
-				collider.size = heavySize;
+				ownCollider.center = heavyCenter;
+				ownCollider.size = heavySize;
 				speed = heavySpeed;
 				jumpSpeed = heavyJumpSpeed;
 				break;
