@@ -27,7 +27,11 @@ public class PressurePlateBase : Eventick
 
     protected void OnTriggerEnter(Collider other)
     {
+<<<<<<< .merge_file_a17436
+        if (other.gameObject.GetComponent<Player>().weight > recWeight)
+=======
         if (other.tag == "Player" && GameManager.MainPlayer.weight > recWeight)
+>>>>>>> .merge_file_a10516
         {
             stay = true;
         }

@@ -1,19 +1,31 @@
+<<<<<<< .merge_file_a04464
+﻿using System;
+using System.Collections;
+=======
 ﻿using System.Collections;
+>>>>>>> .merge_file_a08024
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+<<<<<<< .merge_file_a04464
+
+=======
+>>>>>>> .merge_file_a08024
 	[HideInInspector]
 	public WEIGHT_STATE weightState = WEIGHT_STATE.LIGHT;
 	
 	protected float speed = 0;
 	protected float jumpSpeed = 0;
 
+<<<<<<< .merge_file_a04464
+=======
 	protected bool isJumping = false;
 
 	public Animator animator;
 
+>>>>>>> .merge_file_a08024
 	[HideInInspector]
 	public List<PickableItem> closeItems;
 
@@ -47,10 +59,23 @@ public class Player : MonoBehaviour
 
 	[HideInInspector]
 	public Rigidbody rb;
+<<<<<<< .merge_file_a04464
+	
+	private Vector3 nextMovement;
+
+	internal void AddMovement(Vector3 vector3)
+	{
+
+	}
+
+	private void Start()
+	{
+=======
 
 	private void Start()
 	{
 		if (animator == null) Debug.LogAssertion("ANIMATOR IN PLAYER IS NULL");
+>>>>>>> .merge_file_a08024
 		closeItems = new List<PickableItem>();
 		bag = new List<PickableItem>();
 		rb = GetComponent<Rigidbody>();
@@ -92,11 +117,22 @@ public class Player : MonoBehaviour
 		if (Input.GetKey(KeyCode.A) || Input.GetKeyDown(KeyCode.Q))
 		{
 			rb.MovePosition(transform.position + Vector3.right * -speed * Time.deltaTime);
+<<<<<<< .merge_file_a04464
+=======
 			animator.Play("Run");
+>>>>>>> .merge_file_a08024
 		}
 		else if (Input.GetKey(KeyCode.D))
 		{
 			rb.MovePosition(transform.position + Vector3.right * speed * Time.deltaTime);
+<<<<<<< .merge_file_a04464
+		}
+		
+		//Jump
+		if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+		{
+			rb.velocity = Vector3.up * jumpSpeed;
+=======
 			animator.Play("Run");
 		}
 		else
@@ -110,6 +146,7 @@ public class Player : MonoBehaviour
 			rb.velocity = Vector3.up * jumpSpeed;
 			animator.Play("Jump");
 			isJumping = true;
+>>>>>>> .merge_file_a08024
 		}
 
 		//Pick Close Item
@@ -134,11 +171,17 @@ public class Player : MonoBehaviour
 				weight -= pickable.weight;
 				pickable.gameObject.transform.position = itemDropPoint.position;
 				pickable.gameObject.SetActive(true);
+<<<<<<< .merge_file_a04464
+				pickable.rb.AddForce((Vector3.up*3 + Vector3.right * (UnityEngine.Random.value - 0.5f) * 2) * UnityEngine.Random.value * 5.0f, ForceMode.Impulse);
+=======
 				pickable.SetVelocity(Vector3.up * Random.Range(1.0f, 2.0f) + Vector3.right * Random.value * 2.0f);
+>>>>>>> .merge_file_a08024
 				bag.Remove(pickable);
 				CheckWeightState();
 			}
 		}
+<<<<<<< .merge_file_a04464
+=======
 
 		if (Physics.Raycast(transform.position, Vector3.down, 1))
 		{
@@ -149,6 +192,7 @@ public class Player : MonoBehaviour
 	private void OnDrawGizmos()
 	{
 		Gizmos.DrawRay(transform.position, Vector3.down * 1);
+>>>>>>> .merge_file_a08024
 	}
 
 	protected void CheckWeightState()

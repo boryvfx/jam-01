@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< .merge_file_a34164
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: cbfe36cfddfde964d9dfce63a355d5dd
+=======
   m_Scenes: []
+>>>>>>> .merge_file_a17216
   m_configObjects: {}
