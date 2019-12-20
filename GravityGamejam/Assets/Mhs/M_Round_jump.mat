@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Ambiant_shader
+  m_Name: M_Round_jump
   m_Shader: {fileID: -6465566751694194690, guid: b93486ffff0444543b42a4529e6323e1,
     type: 3}
   m_ShaderKeywords: 
@@ -23,9 +23,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_47A8B906:
-        m_Texture: {fileID: 2800000, guid: ec0c56af4ea8f954aa8c3799cc84ca11, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9abb9dfc7902c0f47a487fc68462b013, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_F6929CC2: {r: 1, g: 1, b: 1, a: 0}
+    - Color_F6929CC2: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 0}
+    - Vector2_9283DDF1: {r: 1, g: 1, b: 0, a: 0}
