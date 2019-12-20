@@ -14,11 +14,13 @@ public class PickableItem : MonoBehaviour
 	
 	protected Vector3 velocity;
 	protected float hDrag = .5f;
-	protected float g = 0.1f;
+	protected float g = 3f;
+	protected bool onGround = false;
 	
 	private void Start()
 	{
-		heightRay = new Ray(transform.position, Vector3.down);
+		velocity = new Vector3();
+		heightRay = new Ray(transform.position, Vector3.down * hoverHeight);
 		if (gameObject.tag != "Pickable") Debug.LogWarning("The gameobject : " + gameObject.name + " isn't tagged as Pickable, if you want to pick up this item in game you might want to tag it as 'Pickable'", gameObject);
 	}
 
@@ -31,18 +33,27 @@ public class PickableItem : MonoBehaviour
 
 	private void Update()
 	{
-		if (Physics.Raycast(heightRay, out RaycastHit hitInfo, hoverHeight + 0.01f))
+		if (!Physics.Raycast(heightRay, hoverHeight))
 		{
-			transform.position = hitInfo.point + Vector3.up * hoverHeight;
-			velocity = new Vector3();
-		}
-		else
-		{
-			velocity.y += -g;
-			velocity.x *= hDrag;
+			onGround = false;
 		}
 
-		transform.position += velocity;
+		if (!onGround) {
+			velocity.y += -g / 1000.0f;
+			if (velocity.y < -1.0f) velocity.y = -1.0f;
+			/*
+			velocity.x *= hDrag;
+			if (velocity.x < 0.01f && velocity.x > 0.01f) velocity.x = 0;
+			*/
+			transform.position += velocity;
+
+			if (Physics.Raycast(heightRay, out RaycastHit hitInfo, hoverHeight))
+			{
+				transform.position = hitInfo.point + (Vector3.up * hoverHeight);
+				velocity = new Vector3();
+				onGround = true;
+			}
+		}
 	}
 
 	public void SetVelocity(Vector3 newVelocity)
