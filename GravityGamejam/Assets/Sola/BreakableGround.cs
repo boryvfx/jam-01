@@ -4,7 +4,7 @@ public class BreakableGround : Eventick
 {
     public bool stay = false;
 
-    protected int recWeight = 5;
+    protected int recWeight = 15;
     protected int baseResistance = 50;
     public int currentLife = 0;
     public int currentWeight = 0;
