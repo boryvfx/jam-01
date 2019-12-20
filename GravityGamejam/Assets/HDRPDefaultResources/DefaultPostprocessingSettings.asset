@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< .merge_file_a08536
 --- !u!114 &-6059232096170818451
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -227,6 +228,9 @@ MonoBehaviour:
     min: 0
     max: 20
 --- !u!114 &-1345120279064418382
+=======
+--- !u!114 &-4142925426642328301
+>>>>>>> .merge_file_a25268
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,12 +249,21 @@ MonoBehaviour:
     m_Value: {fileID: 0}
   intensity:
     m_OverrideState: 1
+<<<<<<< .merge_file_a08536
     m_Value: 0.304
     min: 0
     max: 1
   maxSamples:
     m_OverrideState: 0
     m_Value: 8
+=======
+    m_Value: 1
+    min: 0
+    max: 1
+  maxSamples:
+    m_OverrideState: 1
+    m_Value: 5
+>>>>>>> .merge_file_a25268
     min: 3
     max: 24
 --- !u!114 &11400000
@@ -267,12 +280,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: 5212735368989570280}
+<<<<<<< .merge_file_a08536
   - {fileID: 8893285731476512548}
   - {fileID: -6059232096170818451}
   - {fileID: -5420135264580068553}
   - {fileID: -1345120279064418382}
   - {fileID: -5726953299127457758}
   - {fileID: -6033084791342472268}
+=======
+  - {fileID: -4142925426642328301}
+>>>>>>> .merge_file_a25268
 --- !u!114 &5212735368989570280
 MonoBehaviour:
   m_ObjectHideFlags: 3
