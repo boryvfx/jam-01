@@ -145,7 +145,7 @@ public class Player : MonoBehaviour
 				weight -= pickable.weight;
 				pickable.gameObject.transform.position = itemDropPoint.position;
 				pickable.gameObject.SetActive(true);
-				pickable.SetVelocity(Vector3.up * Random.Range(1.0f, 2.0f) + Vector3.right * Random.value * 2.0f);
+				pickable.SetVelocity(Vector3.up * Random.Range(.1f, .2f) + Vector3.right * Random.Range(-.1f,.1f));
 				bag.Remove(pickable);
 				CheckWeightState();
 			}
