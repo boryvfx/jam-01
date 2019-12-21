@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mCristauxLit_06
+  m_Name: mCristauxLit_07
   m_Shader: {fileID: -6465566751694194690, guid: 0863ebb089cad1c478afbac68d53693a,
     type: 3}
   m_ShaderKeywords: 
@@ -23,11 +23,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_BE17961B:
-        m_Texture: {fileID: 2800000, guid: 7c527c8b1e95bfa498ea757b13c3215e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7206c8362cfbbba4788250bd39a23686, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_B6493F73: -735.6
+    - Vector1_B6493F73: -670.8
     - Vector1_C77B3FF8: 10
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
@@ -63,7 +63,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_904D1090: {r: 0.13274139, g: 0.3679245, b: 0, a: 0}
+    - Color_904D1090: {r: 3.8330877, g: 3.3855927, b: 2.5855262, a: 0}
     - Color_F036171E: {r: 1, g: 1, b: 1, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

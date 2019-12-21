@@ -63,7 +63,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_904D1090: {r: 0, g: 0, b: 0, a: 0}
+    - Color_904D1090: {r: 0.16006587, g: 0.31132078, b: 0.2523116, a: 0}
     - Color_F036171E: {r: 1, g: 1, b: 1, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
