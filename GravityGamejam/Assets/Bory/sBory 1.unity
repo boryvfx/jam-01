@@ -21695,8 +21695,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weightState: 0
-  animator: {fileID: 0}
-  playerRenderer: {fileID: 0}
   closeItems: []
   bag: []
   weight: 10
@@ -26344,7 +26342,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d555618eb316094cb62b1819933886e, type: 2}
+  - {fileID: -9019798376502564416, guid: 624138f7f222ab444a94669abf5e80f5, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
