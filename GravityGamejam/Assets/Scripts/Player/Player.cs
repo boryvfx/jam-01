@@ -16,6 +16,10 @@ public class Player : MonoBehaviour
 
 	public GameObject playerRenderer;
 
+	public GameObject lightBag;
+	public GameObject mediumBag;
+	public GameObject heavyBag;
+
 	protected float rightAngle = 105.0f;
 	protected float leftAngle = 255.0f;
 
@@ -72,18 +76,27 @@ public class Player : MonoBehaviour
 				ownCollider.size = lightSize;
 				speed = lightSpeed;
 				jumpSpeed = lightJumpSpeed;
+				lightBag.SetActive(true);
+				mediumBag.SetActive(false);
+				heavyBag.SetActive(false);
 				break;
 			case WEIGHT_STATE.MEDIUM:
 				ownCollider.center = mediumCenter;
 				ownCollider.size = mediumSize;
 				speed = mediumSpeed;
 				jumpSpeed = mediumJumpSpeed;
+				lightBag.SetActive(false);
+				mediumBag.SetActive(true);
+				heavyBag.SetActive(false);
 				break;
 			case WEIGHT_STATE.HEAVY:
 				ownCollider.center = heavyCenter;
 				ownCollider.size = heavySize;
 				speed = heavySpeed;
 				jumpSpeed = heavyJumpSpeed;
+				lightBag.SetActive(false);
+				mediumBag.SetActive(false);
+				heavyBag.SetActive(true);
 				break;
 			default:
 				break;
@@ -98,12 +111,18 @@ public class Player : MonoBehaviour
 		{
 			rb.MovePosition(transform.position + Vector3.right * -speed * Time.deltaTime);
 			playerRenderer.transform.rotation = Quaternion.Euler(new Vector3(0, leftAngle, 0));
-			if(!isJumping) animator.Play("Run");
+			lightBag.transform.localScale = new Vector3(-0.01f,0.01f,0.01f);
+			mediumBag.transform.localScale = new Vector3(-0.01f, 0.01f, 0.01f);
+			heavyBag.transform.localScale = new Vector3(-0.01f, 0.01f, 0.01f);
+			if (!isJumping) animator.Play("Run");
 		}
 		else if (Input.GetKey(KeyCode.D))
 		{
 			rb.MovePosition(transform.position + Vector3.right * speed * Time.deltaTime);
 			playerRenderer.transform.rotation = Quaternion.Euler(new Vector3(0, rightAngle, 0));
+			lightBag.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+			mediumBag.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+			heavyBag.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 			if (!isJumping) animator.Play("Run");
 		}
 		else
@@ -116,6 +135,16 @@ public class Player : MonoBehaviour
 		{
 			isJumping = false;
 		}
+		else
+		{
+			isJumping = true;
+		}
+
+		if(isJumping)
+		{
+			animator.Play("Landing");
+		}
+
 		if (!isJumping && (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
 		{
 			rb.velocity = Vector3.up * jumpSpeed;

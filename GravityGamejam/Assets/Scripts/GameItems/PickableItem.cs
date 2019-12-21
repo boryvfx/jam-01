@@ -26,6 +26,7 @@ public class PickableItem : MonoBehaviour
 
 	private void OnDrawGizmos()
 	{
+		heightRay = new Ray(transform.position, Vector3.down);
 		Vector3 pos = transform.position;
 		Gizmos.color = Color.red;
 		Gizmos.DrawRay(heightRay);

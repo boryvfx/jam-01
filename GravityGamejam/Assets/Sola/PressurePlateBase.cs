@@ -31,7 +31,6 @@ public class PressurePlateBase : Eventick
         {
             stay = true;
         }
-
     }
 
     protected void OnTriggerStay(Collider other)
