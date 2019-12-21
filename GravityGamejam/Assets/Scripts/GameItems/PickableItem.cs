@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PickableItem : MonoBehaviour
 {
-	public string itemName = "Item";
 	public ITEM_RARITY itemRarity = ITEM_RARITY.VERT;
 	public int weight = 0;
-	public Texture2D image;
+	public GameObject[] pickupFX;
+	protected int randomID = 0;
 
 	public float hoverHeight = 0.2f;
 	protected Ray heightRay;
@@ -20,6 +20,7 @@ public class PickableItem : MonoBehaviour
 	
 	private void Start()
 	{
+		randomID = Random.Range(0, pickupFX.Length-1);
 		velocity = new Vector3();
 		if (gameObject.tag != "Pickable") Debug.LogWarning("The gameobject : " + gameObject.name + " isn't tagged as Pickable, if you want to pick up this item in game you might want to tag it as 'Pickable'", gameObject);
 	}
