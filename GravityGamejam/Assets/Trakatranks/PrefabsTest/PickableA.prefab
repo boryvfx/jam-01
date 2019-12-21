@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7537515127894472759}
   - component: {fileID: 7537515127894472758}
   - component: {fileID: 7537515127894472757}
-  - component: {fileID: 7537515127894472756}
   - component: {fileID: 7537515127894472755}
   m_Layer: 0
   m_Name: PickableA
@@ -60,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4c23f50f829cbd4499a89d85f588fe41, type: 2}
+  - {fileID: 2100000, guid: f9df85c4e6182c94494ed71800282a6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,22 +93,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7537515127894472756
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7537515127894472754}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 8
-  m_CollisionDetection: 0
 --- !u!114 &7537515127894472755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44eeb0dc98681b74b805b63f3a425575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Model: {fileID: 7537515127894472754}
   itemName: Item
-  weight: 10
+  itemRarity: 0
+  weight: 2
+  image: {fileID: 0}
+  hoverHeight: 0.2
+  onGround: 0
