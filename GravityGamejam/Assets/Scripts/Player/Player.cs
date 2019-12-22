@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
 
 	public Transform fxGetPoint;
 
+	public GameObject fxPickUp;
+
 	protected float rightAngle = 105.0f;
 	protected float leftAngle = 255.0f;
 
@@ -67,6 +69,35 @@ public class Player : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 		ownCollider = GetComponent<BoxCollider>();
 		CheckWeightState();
+	}
+
+	public int GetScore()
+	{
+		int score = 0;
+		foreach (PickableItem item in bag)
+		{
+			switch (item.itemRarity)
+			{
+				case ITEM_RARITY.VERT:
+					score += 2;
+					break;
+				case ITEM_RARITY.BLEU:
+					score += 5;
+					break;
+				case ITEM_RARITY.VIOLET:
+					score += 11;
+					break;
+				case ITEM_RARITY.JAUNE:
+					score += 25;
+					break;
+				case ITEM_RARITY.ROUGE:
+					score += 0;
+					break;
+				default:
+					break;
+			}
+		}
+		return score;
 	}
 
 	protected void SetSize(WEIGHT_STATE weightState)
@@ -133,7 +164,7 @@ public class Player : MonoBehaviour
 		}
 
 		//Jump
-		if (Physics.Raycast(transform.position, Vector3.down, 1f))
+		if (Physics.Raycast(transform.position, Vector3.down, 1.5f))
 		{
 			isJumping = false;
 		}
@@ -163,6 +194,7 @@ public class Player : MonoBehaviour
 				weight += pickable.weight;
 				closeItems.Remove(pickable);
 				bag.Add(pickable);
+				Destroy(Instantiate(fxPickUp, pickable.gameObject.transform.position, Quaternion.identity), 2.0f);
 				pickable.gameObject.SetActive(false);
 				GameObject fxGet = Instantiate(pickable.pickupFX[pickable.randomID], fxGetPoint);
 				fxGet.transform.position += new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0);

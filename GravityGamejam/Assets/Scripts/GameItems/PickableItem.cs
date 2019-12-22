@@ -56,6 +56,13 @@ public class PickableItem : MonoBehaviour
 				}
 			}
 		}
+		else
+		{
+			if (!Physics.Raycast(heightRay, out RaycastHit hitInfo, hoverHeight))
+			{
+				onGround = false;
+			}
+		}
 	}
 
 	public void SetVelocity(Vector3 newVelocity)
@@ -70,5 +77,6 @@ public enum ITEM_RARITY
 	VERT,
 	BLEU,
 	VIOLET,
-	JAUNE
+	JAUNE,
+	ROUGE
 }
