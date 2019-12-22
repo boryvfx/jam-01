@@ -31,9 +31,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_124EB2E0: -0.15
+    - Vector1_124EB2E0: 2
     - Vector1_48FF8D7B: 1
-    - Vector1_9285A442: 1
+    - Vector1_9285A442: 2
     - Vector1_B6493F73: 0
     - Vector1_C77B3FF8: 1
     - _AlphaCutoff: 0.5
@@ -41,6 +41,7 @@ Material:
     - _AlphaDstBlend: 0
     - _AlphaSrcBlend: 1
     - _BlendMode: 0
+    - _Break: 1
     - _CullMode: 2
     - _CullModeForward: 2
     - _DoubleSidedEnable: 0

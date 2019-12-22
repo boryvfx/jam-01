@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
 
 	public Transform fxGetPoint;
 
+	public GameObject fxPickUp;
+
 	protected float rightAngle = 105.0f;
 	protected float leftAngle = 255.0f;
 
@@ -163,6 +165,7 @@ public class Player : MonoBehaviour
 				weight += pickable.weight;
 				closeItems.Remove(pickable);
 				bag.Add(pickable);
+				Destroy(Instantiate(fxPickUp, pickable.gameObject.transform.position, Quaternion.identity), 2.0f);
 				pickable.gameObject.SetActive(false);
 				GameObject fxGet = Instantiate(pickable.pickupFX[pickable.randomID], fxGetPoint);
 				fxGet.transform.position += new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0);
