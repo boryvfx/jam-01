@@ -3,7 +3,17 @@ guid: 12eb06a06ba4cf8458c0ecf52e2273af
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bot_shroom03Mat
+    second: {fileID: 2100000, guid: d5c9092cac299f849aec30f6dcdd55db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: top_shroom03Mat
+    second: {fileID: 2100000, guid: d5c9092cac299f849aec30f6dcdd55db, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
