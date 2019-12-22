@@ -5,6 +5,8 @@ using UnityEngine;
 public class Breakable : MonoBehaviour
 {
 	public WEIGHT_STATE minimumWeight = WEIGHT_STATE.LIGHT;
+	public GameObject destroyFX;
+	public float zOffset = 1.0f;
 
 	protected MeshRenderer mr;
 	protected Material mat;
@@ -86,6 +88,7 @@ public class Breakable : MonoBehaviour
 		mat.SetFloat("_Break", life);
 		if(life <= 0)
 		{
+			Instantiate(destroyFX, transform.position, Quaternion.identity);
 			Destroy(gameObject);
 		}
 	}
