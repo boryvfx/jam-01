@@ -135,7 +135,7 @@ public class Player : MonoBehaviour
 		}
 
 		//Jump
-		if (Physics.Raycast(transform.position, Vector3.down, 1f))
+		if (Physics.Raycast(transform.position, Vector3.down, 1.5f))
 		{
 			isJumping = false;
 		}
