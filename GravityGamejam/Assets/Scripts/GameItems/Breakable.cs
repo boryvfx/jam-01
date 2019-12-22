@@ -5,11 +5,12 @@ using UnityEngine;
 public class Breakable : MonoBehaviour
 {
 	public WEIGHT_STATE minimumWeight = WEIGHT_STATE.LIGHT;
+	public GameObject destroyFX;
+	public float zOffset = 1.0f;
 
 	protected MeshRenderer mr;
 	protected Material mat;
-
-	[SerializeField]
+	
 	protected float life = 1.0f;
 
 	protected bool useLight = false;
@@ -18,12 +19,9 @@ public class Breakable : MonoBehaviour
 	public float mediumBreakTime = 3.0f;
 	protected bool useHeavy = false;
 	public float heavyBreakTime = 1.0f;
-
-	[SerializeField]
+	
 	protected float lightLoss;
-	[SerializeField]
 	protected float mediumLoss;
-	[SerializeField]
 	protected float heavyLoss;
 
 	// Start is called before the first frame update
@@ -86,6 +84,7 @@ public class Breakable : MonoBehaviour
 		mat.SetFloat("_Break", life);
 		if(life <= 0)
 		{
+			Instantiate(destroyFX, transform.position, Quaternion.identity);
 			Destroy(gameObject);
 		}
 	}

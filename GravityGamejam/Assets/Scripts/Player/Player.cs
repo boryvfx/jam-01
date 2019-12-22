@@ -71,6 +71,35 @@ public class Player : MonoBehaviour
 		CheckWeightState();
 	}
 
+	public int GetScore()
+	{
+		int score = 0;
+		foreach (PickableItem item in bag)
+		{
+			switch (item.itemRarity)
+			{
+				case ITEM_RARITY.VERT:
+					score += 2;
+					break;
+				case ITEM_RARITY.BLEU:
+					score += 5;
+					break;
+				case ITEM_RARITY.VIOLET:
+					score += 11;
+					break;
+				case ITEM_RARITY.JAUNE:
+					score += 25;
+					break;
+				case ITEM_RARITY.ROUGE:
+					score += 0;
+					break;
+				default:
+					break;
+			}
+		}
+		return score;
+	}
+
 	protected void SetSize(WEIGHT_STATE weightState)
 	{
 		switch (weightState)
@@ -135,7 +164,7 @@ public class Player : MonoBehaviour
 		}
 
 		//Jump
-		if (Physics.Raycast(transform.position, Vector3.down, 1f))
+		if (Physics.Raycast(transform.position, Vector3.down, 1.5f))
 		{
 			isJumping = false;
 		}
