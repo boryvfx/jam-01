@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 	public GameObject mediumBag;
 	public GameObject heavyBag;
 
+	public Transform fxGetPoint;
+
 	protected float rightAngle = 105.0f;
 	protected float leftAngle = 255.0f;
 
@@ -153,7 +155,7 @@ public class Player : MonoBehaviour
 		}
 
 		//Pick Close Item
-		if(Input.GetKeyDown(KeyCode.E))
+		if(Input.GetMouseButtonDown(0))
 		{
 			PickableItem pickable = GetClosestItem();
 			if(pickable != null)
@@ -162,11 +164,14 @@ public class Player : MonoBehaviour
 				closeItems.Remove(pickable);
 				bag.Add(pickable);
 				pickable.gameObject.SetActive(false);
+				GameObject fxGet = Instantiate(pickable.pickupFX[pickable.randomID], fxGetPoint);
+				fxGet.transform.position += new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0);
+				Destroy(fxGet, 1.0f);
 				CheckWeightState();
 			}
 		}
 
-		if (Input.GetKeyDown(KeyCode.R))
+		if (Input.GetMouseButtonDown(1))
 		{
 			if(bag.Count != 0)
 			{

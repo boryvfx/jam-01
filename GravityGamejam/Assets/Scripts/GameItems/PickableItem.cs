@@ -7,7 +7,8 @@ public class PickableItem : MonoBehaviour
 	public ITEM_RARITY itemRarity = ITEM_RARITY.VERT;
 	public int weight = 0;
 	public GameObject[] pickupFX;
-	protected int randomID = 0;
+	[HideInInspector]
+	public int randomID = 0;
 
 	public float hoverHeight = 0.2f;
 	protected Ray heightRay;
@@ -15,12 +16,11 @@ public class PickableItem : MonoBehaviour
 	protected Vector3 velocity;
 	protected float hDrag = .95f;
 	protected float g = 5f;
-	[SerializeField]
 	protected bool onGround = false;
 	
 	private void Start()
 	{
-		randomID = Random.Range(0, pickupFX.Length-1);
+		randomID = Random.Range(0, pickupFX.Length);
 		velocity = new Vector3();
 		if (gameObject.tag != "Pickable") Debug.LogWarning("The gameobject : " + gameObject.name + " isn't tagged as Pickable, if you want to pick up this item in game you might want to tag it as 'Pickable'", gameObject);
 	}
