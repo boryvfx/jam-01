@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,4 +15,16 @@ public class GameManager : MonoBehaviour
     {
 		MainPlayer = mainPlayer;
     }
+
+	public static void StopGame()
+	{
+		ScoreManager.SetScore(MainPlayer.GetScore());
+		MainPlayer.StartCoroutine(LoadScoreScene());
+	}
+
+	public static IEnumerator LoadScoreScene()
+	{
+		yield return new WaitForSeconds(2.0f);
+		SceneManager.LoadScene("ScoreScene");
+	}
 }
