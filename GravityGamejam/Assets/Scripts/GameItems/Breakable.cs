@@ -32,9 +32,9 @@ public class Breakable : MonoBehaviour
 		mr = GetComponent<MeshRenderer>();
 		mat = mr.material;
 
-		lightLoss = 1-lightBreakTime * 0.02f;
-		mediumLoss = 1-mediumBreakTime * 0.02f;
-		heavyLoss = 1-heavyBreakTime * 0.02f;
+		lightLoss = (life / lightBreakTime) * 0.02f;
+		mediumLoss = (life / mediumBreakTime) * 0.02f;
+		heavyLoss = (life / heavyBreakTime) * 0.02f;
 
 		switch (minimumWeight)
 		{
@@ -83,7 +83,7 @@ public class Breakable : MonoBehaviour
 
 	private void Update()
 	{
-		//mat.SetFloat("", life);
+		mat.SetFloat("Break", life);
 		if(life <= 0)
 		{
 			Destroy(gameObject);
