@@ -70,5 +70,6 @@ public enum ITEM_RARITY
 	VERT,
 	BLEU,
 	VIOLET,
-	JAUNE
+	JAUNE,
+	ROUGE
 }
