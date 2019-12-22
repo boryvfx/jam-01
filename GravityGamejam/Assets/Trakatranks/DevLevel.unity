@@ -1538,9 +1538,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimumWeight: 1
+  life: 1
   lightBreakTime: 5
   mediumBreakTime: 3
   heavyBreakTime: 1
+  lightLoss: 0
+  mediumLoss: 0
+  heavyLoss: 0
 --- !u!65 &1995012226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1584,7 +1588,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 79f01f3c18827c0449d856ded386ab89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -83,7 +83,7 @@ public class Breakable : MonoBehaviour
 
 	private void Update()
 	{
-		mat.SetFloat("Break", life);
+		mat.SetFloat("_Break", life);
 		if(life <= 0)
 		{
 			Destroy(gameObject);
